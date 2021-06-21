@@ -1,0 +1,3 @@
+<StackLayout loaded="onload">
+    <Label text="{{ greeterMessage }}" />
+</StackLayout>

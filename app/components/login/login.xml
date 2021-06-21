@@ -1,0 +1,4 @@
+<StackLayout loaded="onload"  xmlns:greeter="components/greeter">
+    <Label text="{{ loginMessage }}" />
+    <greeter:greeter user="{{ name }}" />
+</StackLayout>

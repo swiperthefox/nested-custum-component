@@ -24,6 +24,10 @@ The `user` property in `login.xml`
     
 didn't get the right value for `name`, because the bindingContext for the `login` component is not created yet when the `greeter` element is created.
 
+## Workaround and Solution
+- Workaround: Since `greeter` inherits the binding context from login by default, so it can use the properties of the binding context of `login`. But this means that `greeter` can only render data of its parent, not able to have it's own behavior code. 
+- Solution(?): Do not pass the data via property. When the parent compoent is loaded, select the child element, and create the binding context for it. The binding context can define behaviors of the child, as well as property values.
+
 ## More Unexpected Behaviors
 If we put the app to background, then bring it back, the text displayed becomes:
 

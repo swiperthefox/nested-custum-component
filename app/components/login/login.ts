@@ -7,5 +7,12 @@ export function onload(args) {
         loginMessage: `Welcome to ${container.appName}`,
         name: "test user"
     }
+    
+    let greeterVM = {
+        greeterMessage: `Hello ${container.bindingContext.name}`
+    }
+    let greeter = container.getViewById('greeter')
+    greeter.bindingContext = greeterVM
+    
     console.log("login's appName property (after bindingContext change):", container.appName)
 }
